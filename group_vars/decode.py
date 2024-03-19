@@ -16,15 +16,10 @@ def decrypt_data(file_path, key):
     return decrypted_data.decode()
 
 def write_group_vars(decrypted_data, vars_file_path):
-    data_items = decrypted_data.split(', ')  # Splitting by ', ' to get each key-value pair
-    data_dict = {}
-    for item in data_items:
-        key, value = item.split(': ', 1)
-        formatted_key = key.lower().replace(' ', '_')
-        # Directly assign value without manual quoting
-        data_dict[formatted_key] = value
+    # Load decrypted data into a YAML object
+    data_dict = yaml.safe_load(decrypted_data)
 
-    # Write to the specified vars file
+    # Write the YAML object directly back into the file
     with open(vars_file_path, 'w') as file:
         yaml.safe_dump(data_dict, file, default_flow_style=False, allow_unicode=True, sort_keys=False)
 
@@ -32,9 +27,9 @@ def write_group_vars(decrypted_data, vars_file_path):
     print(f"Vars written on {current_date}")
 
 if __name__ == "__main__":
-    secret_key_file_path = 'key.txt'
+    secret_key_file_path = '../key.txt'
     key = load_key_from_file(secret_key_file_path)
-    decrypted_data = decrypt_data("encrypted_data.txt", key)
+    decrypted_data = decrypt_data("group_vars.yaml", key)
 
-    vars_file_path = 'group_vars/all.yml'
+    vars_file_path = 'group_vars.yaml'
     write_group_vars(decrypted_data, vars_file_path)
