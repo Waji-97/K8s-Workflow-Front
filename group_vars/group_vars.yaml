@@ -1,11 +1,1 @@
-cluster_name: k8s-cluster
-service_ip: 192.168.0.0/32
-pod_ip: 10.0.0.0/16
-fire_name: Hohoho
-storage_name: "titleup"
-
-dept_name: "mycompany"
-full_name: "mark henry"
-id_name: 1
-
-my_file:
+gAAAAABl-X2DAEkEiFHN_CMfTAC1j0hH73_iXFeBWSM29m3rXVwOFclLmO2DzkX4O-qwXLArXOokPw1BNGIJCAyeti7CkAidftzBLtS0xfbuYaUGHP-kclUmeggsShNVZUo9kbHs0GXfqG74QDkamGDSHs353ErgyWqE3Qa99XZgrkdvyiDqiFdyfEmCjpB3GOrgIA3rZY4xuhQraYqfpGWklpc76NVz_psEiaD-nd_5KK5JBJ071u8s9ND2M2FH4sBcLXzAd5Gcs79dDdNwi7b0H_wVAacUZlWNreLIeAdISZa6kvj4AkpFG1QbBYLwdbf7BmIEYxfm
