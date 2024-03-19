@@ -7,3 +7,5 @@ storage_name: "titleup"
 dept_name: "mycompany"
 full_name: "mark henry"
 id_name: 1
+
+my_file: file.txt
