@@ -1,0 +1,9 @@
+cluster_name: k8s-cluster
+service_ip: 192.168.0.0/32
+pod_ip: 10.0.0.0/16
+fire_name: Hohoho
+storage_name: "titleup"
+
+dept_name: "mycompany"
+full_name: "mark henry"
+id_name: 1
